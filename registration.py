@@ -75,7 +75,7 @@ def register():
         sname2 = st.text_input('Enter the name of your team mate:',"")
         sdept = st.selectbox('Select your Department :',departments)
         sphone = st.text_input('Enter your contact number :',"")
-        button=st.form_submit_button('Submit',on_click= "clear")
+        button=st.form_submit_button('Submit',on_click= "https://www.google.com/search?q=forms+in+streamlit&oq=&aqs=chrome.3.35i39i362l5j46i39i199i362i465j35i39i362l2.3331243j0j15&sourceid=chrome&ie=UTF-8")
         if button == True and sname=="" or sdept=="" or sphone=="" or sprogram=="SELECT":
           st.markdown('##### Please enter complete details!')  
         else:
