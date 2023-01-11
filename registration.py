@@ -57,9 +57,10 @@ def register():
       cphone = st.text_input('Enter your contact number :',"")
       citem = st.text_input('For classical dance/ Musical instruments please specify',"")
       button=st.form_submit_button('Submit')
-      if button == True and cname=="" or cdept=="" or cphone=="" or citem=="SELECT":
+      if button == True and cname=="" or cdept=="" or cphone=="" or citem=="SELECT" or cprogram=="SELECT":
         st.markdown('##### Please enter complete details!')
       else:
+        st.write('Hello you have successfully registered..')
         lst=[cname,cdept,cphone,cprogram,citem]
         registration(lst,'Sheet1')
 
@@ -75,9 +76,10 @@ def register():
         sdept = st.selectbox('Select your Department :',departments)
         sphone = st.text_input('Enter your contact number :',"")
         button=st.form_submit_button('Submit')
-        if button == True and sname=="" or sdept=="" or sphone=="":
+        if button == True and sname=="" or sdept=="" or sphone=="" or sprogram=="SELECT":
           st.markdown('##### Please enter complete details!')  
         else:
+          st.write('Hello you have successfully registered..')
           lst=[sname,sname2,sdept,sphone,'Carroms']
           registration(lst,'Sheet2')
         
@@ -91,10 +93,11 @@ def register():
         sname6 = st.text_input('Enter the name of your team mate(6)',"")
         sphone = st.text_input('Enter your contact number :',"")
         button=st.form_submit_button('Submit')
-        if button == True and sname==""  or sphone=="":
+        if button == True and sname==""  or sphone=="" or sprogram=="SELECT":
           st.markdown('##### Please enter complete details!') 
         else:
-          lst=[sname,sname1,sname2,sname3,sname4,sname5,sname6,sdept,sphone,'5s Football']
+          st.write('Hello you have successfully registered..')
+          lst=[sname,sname1,sname2,sname3,sname4,sname5,sname6,sphone,'5s Football']
           registration(lst,'Sheet3')
           
       if sprogram == "Badminton(Mixed Doubles)":
@@ -103,9 +106,10 @@ def register():
         sdept = st.selectbox('Select your Department :',departments)
         sphone = st.text_input('Enter your contact number :',"")
         button=st.form_submit_button('Submit')
-        if button == True and sname=="" or sdept=="" or sphone=="":
+        if button == True and sname=="" or sdept=="" or sphone=="" or sprogram=="SELECT":
           st.markdown('##### Please enter complete details!')
         else:
+          st.write('Hello you have successfully registered..')
           lst=[sname,sname2,sdept,sphone,sprogram]
           registration(lst,'Sheet4')
           
@@ -119,9 +123,10 @@ def register():
         ephone = st.text_input('Enter your contact number :',"")
         eothers = st.text_area('If others, Please specify')
         button=st.form_submit_button('Submit')
-        if button == True and sname=="" or sdept=="" or sphone=="":
+        if button == True and ename=="" or edept=="" or ephone=="" or eprogram=="SELECT" or artwork=="SELECT":
           st.markdown('##### Please enter complete details!')
         else:
+          st.write('Hello you have successfully registered..')
           lst=[artwork,ename,edept,ephone,eothers]
           registration(lst,'Sheet5')
 	
@@ -130,9 +135,10 @@ def register():
         edept = st.selectbox('Select Department :',departments)
         eexhi = st.text_area('Shortly describe about your exhibition',"")
         button=st.form_submit_button('Submit')
-        if button == True and edept=="" or eexhi=="" or ename=="":
+        if button == True and edept=="" or eexhi=="" or ename=="" or eprogram=="SELECT" :
           st.markdown('##### Please enter complete details!')
         else:
+          st.write('Hello you have successfully registered..')
           lst=[ename,edept,eexhi,eprogram]
           registration(lst,'Sheet6')
     
