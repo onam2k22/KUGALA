@@ -75,7 +75,7 @@ def register():
         sname2 = st.text_input('Enter the name of your team mate:',"")
         sdept = st.selectbox('Select your Department :',departments)
         sphone = st.text_input('Enter your contact number :',"")
-        button=st.form_submit_button('Submit')
+        button=st.form_submit_button('Submit',on_click= clear_on_submit)
         if button == True and sname=="" or sdept=="" or sphone=="" or sprogram=="SELECT":
           st.markdown('##### Please enter complete details!')  
         else:
